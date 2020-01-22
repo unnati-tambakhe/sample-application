@@ -1,0 +1,51 @@
+Steps to test api:
+
+
+
+Below , playerId used is dynamic variable passed in url to get info.
+
+
+API endpoint: http://localhost:8889/rest/getPlayerInfo/{playerId} ==>  http://localhost:8889/rest/getPlayerInfo/2
+
+Request type : GET method
+
+1)Response in case of success status:
+
+{
+    "status": {
+        "message": "Successfully fetched data.",
+        "code": 200,
+        "cause": ""
+    },
+    "playerInformation": {
+        "playerId": 2,
+        "playerName": "Virat Kohli",
+        "cricketTeam": "India",
+        "totalScore": 133,
+        "matchDetails": [
+            {
+                "matchId": 1,
+                "seriesName": "Asia Cup",
+                "location": "Mumbai Stadium",
+                "score": 78
+            },
+            {
+                "matchId": 2,
+                "seriesName": "World Cup",
+                "location": "Kolkata",
+                "score": 55
+            }
+        ]
+    }
+}
+
+2)Response in case of no record found: 
+
+
+{
+    "status": {
+        "message": "No record found",
+        "code": 404,
+        "cause": "Player does not exist with given id"
+    }
+}

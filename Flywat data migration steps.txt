@@ -1,0 +1,12 @@
+Steps to migrate database through Flyway : 
+
+1)Mention the name of the database you want to use in /flyway-commandline-6.1.4-linux-x64/flyway-6.1.4/conf/flyway.conf file in parameter : flyway.url=jdbc:mysql://localhost:3306/match_tournament
+
+2)Set username and password in parameters : flyway.user and flyway.password to connect to mysql database.
+
+3)Copy all the sql scripst in /flyway-commandline-6.1.4-linux-x64/flyway-6.1.4/sql folder as mentioned version wise.
+
+4)Go to the directory where flyway is installed and execute command ./flyway migrate from flyway-6.1.4 location.
+
+5)All scripts will be executed successfully and check entries in database.
+
